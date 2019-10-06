@@ -93,7 +93,8 @@ module RedmineOpenidConnect
         if user.nil?
           user = User.new
 
-          user.login = user_info["user_name"] || user_info["nickname"]
+          # Hashtag is not allowed as part of the login
+          user.login = user_info["user_name"] || user_info["nickname"] || user_info["unique_name"].gsub('#','__')
 
           firstname = user_info["given_name"]
           lastname = user_info["family_name"]

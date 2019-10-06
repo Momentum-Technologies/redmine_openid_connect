@@ -66,7 +66,7 @@ class OicSession < ActiveRecord::Base
       self.access_token = response["access_token"] if response["access_token"].present?
       self.refresh_token = response["refresh_token"] if response["refresh_token"].present?
       self.id_token = response["id_token"] if response["id_token"].present?
-      self.expires_at = (DateTime.now + response["expires_in"].seconds) if response["expires_in"].present?
+      self.expires_at = (DateTime.now + response["expires_in"].to_i.seconds) if response["expires_in"].present?
       self.save!
     end
     return response
@@ -78,7 +78,7 @@ class OicSession < ActiveRecord::Base
       self.access_token = response["access_token"] if response["access_token"].present?
       self.refresh_token = response["refresh_token"] if response["refresh_token"].present?
       self.id_token = response["id_token"] if response["id_token"].present?
-      self.expires_at = (DateTime.now + response["expires_in"].seconds) if response["expires_in"].present?
+      self.expires_at = (DateTime.now + response["expires_in"].to_i.seconds) if response["expires_in"].present?
       self.save!
     end
     return response

@@ -1,6 +1,10 @@
 # Redmine OpenID Connect Plugin #
 
-Based on the work from [intelimina](https://bitbucket.org/intelimina/redmine_openid_connect).
+Based on the work from [intelimina](https://bitbucket.org/intelimina/redmine_openid_connect) and [devopskube] (https://github.com/devopskube/redmine_openid_connect).
+
+## Changes in this fork ##
+1. Modifications to support Office 365 OIDC / Azure AD App (Single or MultiTenant) login.
+2. Changed Gemfile to support Redmine 4
 
 ## Introduction ##
 This is a plugin based on the implementation of redmine_cas. It redirects to a SSO server bypassing the original Redmine login authentication and using the SSO server authentication in it's place.
