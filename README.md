@@ -1,4 +1,6 @@
-# Redmine OpenID Connect Plugin #
+# DEPRECATED - Redmine OpenID Connect Plugin #
+
+NOTICE: Was not tested against current Redmine version.
 
 Based on the work from [intelimina](https://bitbucket.org/intelimina/redmine_openid_connect) and [devopskube] (https://github.com/devopskube/redmine_openid_connect).
 
